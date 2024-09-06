@@ -56,3 +56,35 @@ body {
     font-size: 1rem;
     color: #666;
 }
+
+
+/* Next */
+.next-page-link {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007BFF; /* Primary color */
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.next-page-link:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: translateX(10px); /* Move text slightly to the right */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.next-page-link::after {
+  content: '→'; /* Arrow symbol after the text */
+  margin-left: 10px;
+  font-size: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.next-page-link:hover::after {
+  margin-left: 15px; /* Arrow moves further on hover */
+}
