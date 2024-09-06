@@ -71,7 +71,7 @@ body {
   transform: rotateY(180deg);
 }
 
-.container:hover .flippable {
+.container.flipped .flippable {
   transform: rotateY(180deg);
 }
 
