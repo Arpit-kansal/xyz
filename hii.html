@@ -9,7 +9,7 @@
 
 <body>
     <link href='https://fonts.googleapis.com/css?family=Solitreo' rel='stylesheet'>
-    <div class="container">
+    <div class="container" id="flip-container">
         <div class="envelope"></div>
         <div class="card">
             <div class="flippable">
@@ -26,5 +26,12 @@
         <div class="lid"></div>
         <div class="shadow"></div>
     </div>
+
+    <script>
+        const flipContainer = document.getElementById('flip-container');
+        flipContainer.addEventListener('click', function() {
+            flipContainer.classList.toggle('flipped');
+        });
+    </script>
 </body>
 </html>
