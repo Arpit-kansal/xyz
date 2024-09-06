@@ -58,33 +58,50 @@ body {
 }
 
 
-/* Next */
+/* Next *//* Initial styling for the "Next" link */
 .next-page-link {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 18px;
-  font-weight: bold;
+  display: none; /* Hidden initially */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 15px 30px;
+  background-color: #28a745; /* Green background */
   color: #fff;
-  background-color: #007BFF; /* Primary color */
+  font-size: 20px;
+  font-weight: bold;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 50px;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s linear 0.3s, opacity 0.3s ease-out;
 }
 
+/* Hover effect */
 .next-page-link:hover {
-  background-color: #0056b3; /* Darker shade on hover */
-  transform: translateX(10px); /* Move text slightly to the right */
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  background-color: #218838; /* Darker green */
+  transform: scale(1.1); /* Slight scale on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Arrow animation */
 .next-page-link::after {
-  content: '→'; /* Arrow symbol after the text */
+  content: '→'; /* Arrow */
   margin-left: 10px;
   font-size: 20px;
   transition: margin-left 0.3s ease;
 }
 
 .next-page-link:hover::after {
-  margin-left: 15px; /* Arrow moves further on hover */
+  margin-left: 15px; /* Arrow moves on hover */
+}
+
+/* Visible state when the page is scrolled to the bottom */
+.show-next-link {
+  display: inline-block;
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
 }
