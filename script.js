@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Next Page
-<script>
+
   window.onscroll = function() {
     var link = document.querySelector('.next-page-link');
     if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2) {
@@ -18,4 +18,4 @@ document.addEventListener('DOMContentLoaded', function() {
       link.classList.remove('show-next-link');
     }
   };
-</script>
+
